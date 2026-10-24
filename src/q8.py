@@ -20,19 +20,22 @@ Task
 
 (a) What does the buggy version actually return for [1, 2, 3, 4, 5, 6, 8], and why?
 
-    Answer:
+    Answer: The buggy version returns 3 because `n % 2 == 1` selects odd numbers, and the list contains three odd numbers: 1, 3 and 5.
 
 (b) Fix the bug. Write the corrected function below.
     (A one-character change is enough, but you must understand why.)
 """
 
 def count_evens(numbers):
-    # your corrected code here
-    pass
+    count = 0
+    for n in numbers:
+        if n % 2 == 0:
+            count = count + 1
+    return count
 
 
 """
 (c) In one sentence, explain in plain English what `n % 2 == 0` checks.
 
-    Answer:
+    Answer: It checks whether `n` is even by testing whether dividing it by 2 leaves a remainder of 0.
 """
